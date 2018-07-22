@@ -16,7 +16,6 @@ class NoAdvertising extends PluginBase{
 		$this->saveDefaultConfig();
 		$this->format = new NoAdvertisingFormat($this);
 		$this->cfg = new Config($this->getDataFolder() . "config.yml", Config::YAML, array());
-		$this->getServer()->getLogger()->info(TF::GREEN . "NoAdvertisingPE is ready!");
 		$this->getServer()->getPluginManager()->registerEvents(new NoAdvertisingListener($this), $this);
 		$this->getCommand("na")->setExecutor(new NoAdvertisingCommand($this));
 	}

@@ -3,20 +3,20 @@
 namespace Vaivez66\NoAdvertisingPE;
 
 use pocketmine\Server;
-use pocketmine\plugin\PluginBase;
 use pocketmine\Player;
 use pocketmine\command\Command;
+use pocketmine\command\PluginCommand;
 use pocketmine\command\CommandSender;
 use pocketmine\command\CommandExecutor;
 use pocketmine\utils\TextFormat as TF;
 
-class NoAdvertisingCommand extends PluginBase implements CommandExecutor{
+class NoAdvertisingCommand extends PluginCommand implements CommandExecutor{
 
     public function __construct(NoAdvertising $plugin){
         $this->plugin = $plugin;
     }
 
-    public function onCommand(CommandSender $sender, Command $cmd, $label, array $args){
+    public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args): bool{
         switch(strtolower($cmd->getName())){
             case "na":
                 if($sender->hasPermission("no.advertising.pe")) {

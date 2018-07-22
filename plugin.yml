@@ -1,9 +1,9 @@
 name: NoAdvertisingPE
 main: Vaivez66\NoAdvertisingPE\NoAdvertising
-version: 1.0.1
-api: [1.12.0, 2.0.0]
+version: 1.0.2
+api: [3.0.0]
 load: POSTWORLD
-authors: [Vaivez66]
+authors: [Vaivez66, robske_110]
 description: "Stop those advertisers!"
 commands:
   na:
