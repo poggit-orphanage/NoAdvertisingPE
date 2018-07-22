@@ -4,19 +4,19 @@
 #   - block
 #   - kick
 type: block
-# The message that will send
+# The message that will be sent
 # You can use {player} to mention their name
-message: '{RED}Do not try to advertising!'
-# Blocked domain names
+message: '{RED}Do not try to advertise!'
+# Blocked domain extensions
 domain:
   - ".me"
   - ".com"
   - ".net"
-# The domains that allowed to use
+# Whitelisted domains
 allowed.domain:
   - "yourserver.com"
   - "pocketmine.net"
-# If true, it will detect a sign
+# If true, content on signs will also be filtered
 detect.sign: true
 # Lines that will change if player advertise on sign
 lines:
@@ -24,7 +24,7 @@ lines:
   - 'No Advertising!'
   - '============='
   - ''
-# The command that will protected from advertising
+# Commands that will also be filtered
 blocked.cmd:
   - "/me"
   - "/tell"

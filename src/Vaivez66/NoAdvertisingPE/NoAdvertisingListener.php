@@ -69,7 +69,7 @@ class NoAdvertisingListener implements Listener{
                         for ($i = 0; $i <= 3; $i++) {
                             $event->setLine($i, $sign[$i]);
                         }
-                        $p->sendMessage(TF::RED . 'Do not try to advertising, ' . $p->getName());
+                        $p->sendMessage(TF::RED . 'Please do not advertise, ' . $p->getName());
                     }
                 }
             }
@@ -93,7 +93,7 @@ class NoAdvertisingListener implements Listener{
             foreach ($this->plugin->getDomain() as $d) {
                 if (stripos($m, $d) !== false) {
                     $event->setCancelled(true);
-                    $p->sendMessage(TF::RED . 'Do not try to advertising with ' . $cmd . ', ' . $p->getName());
+                    $p->sendMessage(TF::RED . 'Please do not advertise using ' . $cmd . ', ' . $p->getName());
                 }
             }
         }
