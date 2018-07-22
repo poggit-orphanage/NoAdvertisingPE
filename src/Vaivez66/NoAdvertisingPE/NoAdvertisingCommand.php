@@ -25,16 +25,14 @@ class NoAdvertisingCommand extends PluginBase implements CommandExecutor{
                             case "add":
                                 if(isset($args[1])){
                                     return $this->plugin->addDomain($sender, $args[1]);
-                                }
-                                else{
+                                }else{
                                     return false;
                                 }
                                 break;
                             case "remove":
                                 if(isset($args[1])){
                                     return $this->plugin->removeDomain($sender, $args[1]);
-                                }
-                                else{
+                                }else{
                                     return false;
                                 }
                                 break;
@@ -42,12 +40,10 @@ class NoAdvertisingCommand extends PluginBase implements CommandExecutor{
                                 return $this->plugin->listDomain($sender);
                                 break;
                         }
-                    }
-                    else{
+                    }else{
                         return false;
                     }
-                }
-                else{
+                }else{
                     $sender->sendMessage(TF::RED . "You do not have permission");
                     return true;
                 }
